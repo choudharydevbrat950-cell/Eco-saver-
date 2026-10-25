@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Saver | A Greener Future</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f8f1;
+      color: #203328;
+    }
+    header {
+      background: #14532d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; }
+    nav {
+      background: #dcfce7;
+      padding: 14px;
+      text-align: center;
+    }
+    nav a {
+      color: #14532d;
+      margin: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 48px 20px;
+      text-align: center;
+      background: #bbf7d0;
+    }
+    .hero h2 { font-size: 32px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #166534;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    section { padding: 25px 18px; }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #00000012;
+    }
+    .emoji { font-size: 40px; }
+    .price { color: #166534; font-weight: bold; }
+    footer {
+      padding: 24px;
+      text-align: center;
+      background: #14532d;
+      color: white;
+    }
+    input, textarea {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌿 Eco-Saver</h1>
+    <p>Waste Today, Resources Tomorrow</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#sell">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Turn Waste Into Worth</h2>
+    <p>Discover useful products made from waste and eco-friendly materials.</p>
+    <a class="btn" href="#products">Explore Products</a>
+  </div>
+
+  <section id="about">
+    <h2>♻️ Our Mission</h2>
+    <p>Eco-Saver aims to give waste a second life by promoting reusable,
+    recycled and environmentally friendly products.</p>
+    <p>We support ideas involving agricultural waste, plant fibres,
+    paper recycling and alternatives to single-use plastics.</p>
+  </section>
+
+  <section id="products">
+    <h2>🌱 Featured Products</h2>
+    <p>Sample listings — these are examples, not confirmed products for sale.</p>
+    <div class="products">
+      <div class="card">
+        <div class="emoji">🌾</div>
+        <h3>Crop-Waste Products</h3>
+        <p>Explore potential products made from straw and crop residues.</p>
+        <p class="price">Price: To be announced</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🪴</div>
+        <h3>Natural Plant Pots</h3>
+        <p>Explore biodegradable pots made from suitable natural materials.</p>
+        <p class="price">Price: To be announced</p>
+      </div>
+      <div class="card">
+        <div class="emoji">📦</div>
+        <h3>Eco Packaging</h3>
+        <p>Discover reusable and recycled packaging alternatives.</p>
+        <p class="price">Price: To be announced</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sell">
+    <h2>🤝 List Your Eco-Friendly Product</h2>
+    <p>Use this demo form to prepare a product enquiry.</p>
+    <form id="productForm">
+      <input id="name" placeholder="Your name" required>
+      <input id="product" placeholder="Product name" required>
+      <textarea id="details" placeholder="Describe your product" required></textarea>
+      <button class="btn" type="submit">Prepare Enquiry</button>
+    </form>
+    <p id="message"></p>
+  </section>
+
+  <footer>
+    <p>🌍 Eco-Saver — Small Steps, Greener Future</p>
+    <p>Building a circular economy, one product at a time.</p>
+  </footer>
+
+  <script>
+    document.getElementById("productForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const product = document.getElementById("product").value;
+      const details = document.getElementById("details").value;
+      document.getElementById("message").textContent =
+        "Enquiry prepared for " + name + ": " + product +
+        ". Your details: " + details +
+        ". Demo only — this form does not send or save data.";
+    });
+  </script>
+</body>
+</html>
